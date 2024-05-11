@@ -21,8 +21,8 @@ Quality Assurance: Soon Zhen Xu
 Project Supervisor: Dr. Tan Chee Keong  
 Project Industry Colaborator: ASPL 
 
-This project is to address the over-rejection rate issue in the PCB  manufacturer industry. 
+The objective of this project is to overcome the issue of over-rejection rates prevalent in the PCB manufacturing industry.
 
-This website is to showcase the product and explain the product methodology. 
+The purpose of this website is to present our product and provide an explanation of its methodology. 
 """
 )
