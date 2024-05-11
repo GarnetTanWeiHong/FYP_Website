@@ -85,7 +85,7 @@ def main():
           centered_text.markdown("""<h1 style="text-align: center; font-size: 1rem"> --- Iterate of Image: """ + str(iterate) + " --- </h1>", unsafe_allow_html=True)
           predict = image_prediction_subpage(each_uploaded_file)
           iterate +=1
-        if not predict:
+        if predict:
           st.write("""The image is done process """)
         else:
           st.write("""Error!!!""")
