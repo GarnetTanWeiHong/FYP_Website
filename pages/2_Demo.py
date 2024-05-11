@@ -72,7 +72,7 @@ def main():
     st.title("Image Prediction with YOLOv8")
 
     uploaded_file = st.file_uploader("Choose image...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
-
+    predict = False
     result = st.button('Start Evaluation')
     if result:
       st.markdown("<h1 style='text-align: center;'>Starting Evaluation Process</h1>", unsafe_allow_html=True)
