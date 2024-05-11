@@ -31,7 +31,7 @@ def predict_image(image, model, msg):
         result.save(filename='./Images Source/result.jpg') # display to screen
         st.image("./Images Source/result.jpg", use_column_width=True,caption=msg)
         image = Image.open("./Images Source/yolov8 BackBone.jpg")
-        image.save(filename='./Images Source/result.jpg')
+        image.save(fp='./Images Source/result.jpg')
     return results
 
 # Define the Streamlit subpage
