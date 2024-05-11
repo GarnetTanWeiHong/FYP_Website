@@ -48,15 +48,15 @@ def image_prediction_subpage(uploaded_file):
           st.image(image, caption="Uploaded Image", use_column_width=True)
 
         with col2:
-          msg = "Prediction Result with v4"
+          msg = "Model A Prediction Result "
           prediction = predict_image(image, v4_model, msg)
         
         with col3:
-          msg = "Prediction Result with v8"
+          msg = "Model B Prediction Result"
           prediction = predict_image(image, v8_model,msg)
 
         with col4:
-          msg = "Prediction Result with v9"
+          msg = "Model C Prediction Result"
           prediction = predict_image(image, v9_model,msg)
         st.write("")
 
@@ -78,15 +78,16 @@ def main():
       iterate = 1 
       if uploaded_file is None:
         st.write("""Please provide at least one image""") 
-      for each_uploaded_file in uploaded_file: 
-        centered_text = st.container()
-        centered_text.markdown("""<h1 style="text-align: center; font-size: 1rem"> --- Iterate of Image: """ + str(iterate) + " --- </h1>", unsafe_allow_html=True)
-        predict = image_prediction_subpage(each_uploaded_file)
-        iterate +=1
-      if predict is not None:
-        st.write("""The image is done process """)
-      else:
-        st.write("""Error!!!""")
+      else: 
+        for each_uploaded_file in uploaded_file: 
+          centered_text = st.container()
+          centered_text.markdown("""<h1 style="text-align: center; font-size: 1rem"> --- Iterate of Image: """ + str(iterate) + " --- </h1>", unsafe_allow_html=True)
+          predict = image_prediction_subpage(each_uploaded_file)
+          iterate +=1
+        if predict is not None:
+          st.write("""The image is done process """)
+        else:
+          st.write("""Error!!!""")
 
 
 if __name__ == '__main__':
