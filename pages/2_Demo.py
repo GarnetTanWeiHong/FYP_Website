@@ -1,4 +1,4 @@
-
+import os
 
 import streamlit as st
 
@@ -30,6 +30,7 @@ def predict_image(image, model, msg):
     for result in results:
         result.save(filename='result.jpg') # display to screen
         st.image("./Images Source/result.jpg", use_column_width=True,caption=msg)
+        os.remove('./result.jpg')
     return results
 
 # Define the Streamlit subpage
