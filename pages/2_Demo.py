@@ -28,7 +28,7 @@ def predict_image(image, model, msg):
 
     # Process the predictions (e.g., convert tensors to images)
     for result in results:
-        result.save(filename='result.jpg') # display to screen
+        result.save(filename='./Images Source/result.jpg') # display to screen
         st.image("./Images Source/result.jpg", use_column_width=True,caption=msg)
         os.remove('./result.jpg')
     return results
