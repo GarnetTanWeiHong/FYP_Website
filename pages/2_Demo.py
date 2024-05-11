@@ -77,18 +77,16 @@ def main():
     if result:
       st.markdown("<h1 style='text-align: center;'>Starting Evaluation Process</h1>", unsafe_allow_html=True)
       iterate = 1 
-      if uploaded_file is None:
-        st.write("""Please provide at least one image""") 
-      else: 
-        for each_uploaded_file in uploaded_file: 
-          centered_text = st.container()
-          centered_text.markdown("""<h1 style="text-align: center; font-size: 1rem"> --- Iterate of Image: """ + str(iterate) + " --- </h1>", unsafe_allow_html=True)
-          predict = image_prediction_subpage(each_uploaded_file)
-          iterate +=1
-        if predict:
-          st.write("""The image is done process """)
-        else:
-          st.write("""Error!!!""")
+      
+      for each_uploaded_file in uploaded_file: 
+        centered_text = st.container()
+        centered_text.markdown("""<h1 style="text-align: center; font-size: 1rem"> --- Iterate of Image: """ + str(iterate) + " --- </h1>", unsafe_allow_html=True)
+        predict = image_prediction_subpage(each_uploaded_file)
+        iterate +=1
+      if predict:
+        st.write("""The image is done process """)
+      else:
+        st.write("""Error!!!""")
 
 
 if __name__ == '__main__':
