@@ -61,6 +61,7 @@ def image_prediction_subpage(uploaded_file):
         st.write("")
 
         return True
+    return False
 
         
          
