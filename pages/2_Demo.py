@@ -1,27 +1,20 @@
-from os import write
-from IPython.utils.contexts import NoOpContext
-import streamlit as st
-from streamlit.elements import image
-import numpy as np
-from PIL import Image
-import io
-import pandas as pd
+
 
 import streamlit as st
+
 from PIL import Image
-import numpy as np
-import torch
+
 from ultralytics import YOLO
-import cv2
+
 # Mount Google Drive (assuming you've already done this in a separate Colab cell)
 # from google.colab import drive
 # drive.mount('/content/drive')
 
 # Specify the path to your YOLOv8 model file in Google Drive
-v4_model_path = "/content/drive/MyDrive/Dashboard Code and Screenshots/Model Source/v4_best.pt"  # Replace with your actual path
+v4_model_path = "./Model Source/v4_best.pt"  # Replace with your actual path
 
-v8_model_path = "/content/drive/MyDrive/Dashboard Code and Screenshots/Model Source/v8_best.pt"
-v9_model_path = "/content/drive/MyDrive/Dashboard Code and Screenshots/Model Source/v9_best.pt"
+v8_model_path = "./Model Source/v8_best.pt"
+v9_model_path = "./Model Source/v9_best.pt"
 # Load the YOLOv8 model
 v4_model = YOLO(v4_model_path)
 v8_model = YOLO(v8_model_path)
@@ -36,7 +29,7 @@ def predict_image(image, model, msg):
     # Process the predictions (e.g., convert tensors to images)
     for result in results:
         result.save(filename='result.jpg') # display to screen
-        st.image("/content/drive/MyDrive/Dashboard Code and Screenshots/result.jpg", use_column_width=True,caption=msg)
+        st.image("./Images Source/result.jpg", use_column_width=True,caption=msg)
     return results
 
 # Define the Streamlit subpage

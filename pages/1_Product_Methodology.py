@@ -1,7 +1,4 @@
-from os import write
-from IPython.utils.contexts import NoOpContext
 import streamlit as st
-from streamlit.elements import image
 
 def main():
     st.set_page_config(page_title="Product Methodology", page_icon="💡")
@@ -12,7 +9,7 @@ def main():
         """This page explains how the product examine the image by utilising object detection technique and image quality assessment."""
     )
     st.write("## Deep Learning Model")
-    st.image('/content/drive/MyDrive/Dashboard Code and Screenshots/Images Source/yolov8 BackBone.jpg')
+    st.image('./Images Source/yolov8 BackBone.jpg')
 
     st.write("## Pre-label Approach")
     st.write("""To address the “missing puzzle” of machine learning, which is the annotated printed circuit board, a pre-label approach is introduced. The labelling cost in PCBs area is relatively higher than other industries as there are required more professionals to identify. A pre-label approach has reduced the needs of professionals, and simplified the job of product owner by scanning through the result of pre-labeling, instead of manually labelling. A pre-label approach is completed via two steps. 
