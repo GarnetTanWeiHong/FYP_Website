@@ -96,6 +96,9 @@ def main():
         st.write("""There was an error""")
 
       result = False
+    clear = st.button("clear all")
+    if clear :
+      st.experimental_rerun()
 
 
 if __name__ == '__main__':
