@@ -68,7 +68,7 @@ def image_prediction_subpage(uploaded_file):
         
 
 def main():
-    st.set_page_config(page_title="Demo", page_icon="📈")
+    st.set_page_config(page_title="Predict Your Defect", page_icon="📈")
     st.title("PCB Defect Detection with YOLOv8")
 
     uploaded_file = st.file_uploader("Choose image...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
