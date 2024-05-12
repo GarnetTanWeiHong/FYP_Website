@@ -76,7 +76,7 @@ def main():
     # if not uploaded, the button should not be pressable
     result = False
     if uploaded_file :
-      result = st.button('Detect', disabled=bool(uploaded_file))
+      result = st.button('Detect')
     if result:
       st.markdown("<h1 style='text-align: center;'>Starting Defect Detection Process</h1>", unsafe_allow_html=True)
       iterate = 1 
