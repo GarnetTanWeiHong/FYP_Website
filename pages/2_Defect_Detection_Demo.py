@@ -71,9 +71,9 @@ def main():
     st.set_page_config(page_title="Predict Your Defect", page_icon="📈")
     st.title("PCB Defect Detection with YOLOv8")
 
-    st.write("""Model A : Epoxy Overflow, Missing Die, Missing LED, Missing Wire.
-             Model B: Cracking 
-             Model C: Misplacement""")
+    st.write("""Model A : Epoxy Overflow, Missing Die, Missing LED, Missing Wire.  
+             Model B: Cracking.  
+             Model C: Misplacement.  """)
 
     uploaded_file = st.file_uploader("Choose image...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
     predict = False
