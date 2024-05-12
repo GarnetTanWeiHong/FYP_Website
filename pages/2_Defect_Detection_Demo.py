@@ -95,6 +95,8 @@ def main():
       else:
         st.write("""There was an error""")
 
+      result = False
+
 
 if __name__ == '__main__':
     main()
