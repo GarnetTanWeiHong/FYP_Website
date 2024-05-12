@@ -69,24 +69,24 @@ def image_prediction_subpage(uploaded_file):
 
 def main():
     st.set_page_config(page_title="Demo", page_icon="📈")
-    st.title("Image Prediction with YOLOv8")
+    st.title("PCB Defect Detection with YOLOv8")
 
     uploaded_file = st.file_uploader("Choose image...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
     predict = False
-    result = st.button('Start Evaluation')
+    result = st.button('Detect')
     if result:
-      st.markdown("<h1 style='text-align: center;'>Starting Evaluation Process</h1>", unsafe_allow_html=True)
+      st.markdown("<h1 style='text-align: center;'>Starting Defect Detection Process</h1>", unsafe_allow_html=True)
       iterate = 1 
       
       for each_uploaded_file in uploaded_file: 
         centered_text = st.container()
-        centered_text.markdown("""<h1 style="text-align: center; font-size: 1rem"> --- Iterate of Image: """ + str(iterate) + " --- </h1>", unsafe_allow_html=True)
+        centered_text.markdown("""<h1 style="text-align: center; font-size: 1rem"> --- Iteration of Image: """ + str(iterate) + " --- </h1>", unsafe_allow_html=True)
         predict = image_prediction_subpage(each_uploaded_file)
         iterate +=1
       if predict:
-        st.write("""The image is done process """)
+        st.write("""Prediction done for image(s)""")
       else:
-        st.write("""Error!!!""")
+        st.write("""There was an error""")
 
 
 if __name__ == '__main__':
