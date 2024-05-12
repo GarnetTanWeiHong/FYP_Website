@@ -10,7 +10,7 @@ def main():
     )
     
     st.write("## PCB Defect Detection Process")
-    st.image('./FYP_Website/Images Source/AOI_process.jpg')
+    st.image('./Images Source/AOI_process.jpg')
     st.write(
 """
 ### 1. Data Acquisition
@@ -32,7 +32,7 @@ def main():
     
     st.write("")
     st.write("## Deep Learning Model")
-    st.image('./FYP_Website/Images Source/yolov8 BackBone.jpg')
+    st.image('./Images Source/yolov8 BackBone.jpg')
 
     st.write("")
     st.write("## Pre-label Approach")
