@@ -73,6 +73,7 @@ def main():
 
     uploaded_file = st.file_uploader("Choose image...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
     predict = False
+    # if not uploaded, the button should not be pressable
     result = st.button('Detect', disabled=bool(uploaded_file))
     if result:
       st.markdown("<h1 style='text-align: center;'>Starting Defect Detection Process</h1>", unsafe_allow_html=True)
