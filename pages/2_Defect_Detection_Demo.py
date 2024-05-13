@@ -19,18 +19,23 @@ v9_model_path = "./Model Source/v9_best.pt"
 v4_model = YOLO(v4_model_path)
 v8_model = YOLO(v8_model_path)
 v9_model = YOLO(v9_model_path)
+
+temp_img = Image.open("./Images Source/table_of_result.jpg") 
+
 # Define the image prediction function
 def predict_image(image, model, msg):
     # No image preprocessing needed in this case
 
     # Make predictions using the YOLOv8 model
     results = model(image)
-
+    
+    
     # Process the predictions (e.g., convert tensors to images)
     for result in results:
         result.save(filename='./Images Source/result.jpg') # display to screen
         st.image("./Images Source/result.jpg", use_column_width=True,caption=msg)
-
+        
+    temp_img.save("./Images Source/result.jpg")
     return results
 
 # Define the Streamlit subpage
