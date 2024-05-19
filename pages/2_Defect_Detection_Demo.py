@@ -50,7 +50,7 @@ def image_prediction_subpage(uploaded_file):
         col1, col2, col3, col4  = st.columns(4)
 
         with col1: 
-          st.image(image, caption="Uploaded Image", use_column_width=True)
+          st.image(image, caption=uploaded_file.name, use_column_width=True)
 
         with col2:
           msg = "Model A Prediction Result "
@@ -76,7 +76,7 @@ def main():
     st.set_page_config(page_title="Predict Your Defect", page_icon="📈")
     st.title("PCB Defect Detection with YOLOv8")
 
-    st.write("""Model A : Epoxy Overflow, Missing Die, Missing LED, Missing Wire.  
+    st.write("""Model A: Epoxy Overflow, Missing Die, Missing LED, Missing Wire.  
              Model B: Cracking.  
              Model C: Misplacement.  """)
 
